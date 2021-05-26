@@ -10,7 +10,7 @@ resource "aws_instance" "cathay-module-example" {
   ami               = data.aws_ssm_parameter.cathay-ami.value
   instance_type     = var.instance-type
   availability_zone = var.instance-az
-  count             = var.instance-count
+  count             = var.instance-count    
   tags = {
     Name = var.server-name
   }
